@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 04/05/2024 às 21:47
+-- Tempo de geração: 11/05/2024 às 21:33
 -- Versão do servidor: 10.4.28-MariaDB
 -- Versão do PHP: 8.2.4
 
@@ -44,7 +44,30 @@ CREATE TABLE `aluno` (
 INSERT INTO `aluno` (`Id`, `Nome`, `Email`, `Telefone`, `Endereco`, `Matricula`, `Turno`) VALUES
 (5, 'Maria', 'teste@escola.br', '443333333333', 'Rua 5', '2024-05-04', 'Noite'),
 (6, 'Ana', 'ana@escola.com', '4455555555', 'Rua sei lá', '2015-05-18', 'Noite'),
-(7, 'Joao ninguem', 'teste@escola.br', '443333333333', 'Rua Zero', '2023-11-14', 'Tarde');
+(7, 'Joao ninguem', 'teste@escola.br', '443333333333', 'Rua Zero', '2023-11-14', 'Tarde'),
+(9, 'fulano', 'chato@escola.pr', '5566666666', 'Rua sei lá', '2024-05-15', 'Tarde');
+
+-- --------------------------------------------------------
+
+--
+-- Estrutura para tabela `aluno_turma`
+--
+
+CREATE TABLE `aluno_turma` (
+  `Id` int(11) NOT NULL,
+  `Id_turma` int(11) NOT NULL,
+  `Id_aluno` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Despejando dados para a tabela `aluno_turma`
+--
+
+INSERT INTO `aluno_turma` (`Id`, `Id_turma`, `Id_aluno`) VALUES
+(27, 3, 5),
+(28, 4, 7),
+(29, 4, 6),
+(30, 3, 9);
 
 -- --------------------------------------------------------
 
@@ -104,6 +127,12 @@ ALTER TABLE `aluno`
   ADD PRIMARY KEY (`Id`);
 
 --
+-- Índices de tabela `aluno_turma`
+--
+ALTER TABLE `aluno_turma`
+  ADD PRIMARY KEY (`Id`,`Id_turma`);
+
+--
 -- Índices de tabela `professor`
 --
 ALTER TABLE `professor`
@@ -123,7 +152,13 @@ ALTER TABLE `turma`
 -- AUTO_INCREMENT de tabela `aluno`
 --
 ALTER TABLE `aluno`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT de tabela `aluno_turma`
+--
+ALTER TABLE `aluno_turma`
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT de tabela `professor`
