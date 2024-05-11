@@ -48,10 +48,12 @@
 <body>
 <header class="cabecalho">
         <ul class="lista-cabecalho">
-        <li><a href="http://localhost/APPGestao_Escolar/index.php#"> Início</a></li>
+        <li><a href="http://localhost/APPGestao_Escolar/index.php"> Início</a></li>
             <li><a href="http://localhost/APPGestao_Escolar/professor/index.php"> Professor</a></li>
             <li><a href="http://localhost/APPGestao_Escolar/aluno/index.php"> Aluno</a></li>
             <li><a href="http://localhost/APPGestao_Escolar/turma/index.php"> Turmas</a></li>
+            <li><a href="http://localhost/APPGestao_Escolar/script/matricalunos.php"> Matriculas</a></li>
+            <li><a href="http://localhost/APPGestao_Escolar/script/verturma.php"> Consulta de turmas</a></li>
         </ul>
     </header>
     <center>
